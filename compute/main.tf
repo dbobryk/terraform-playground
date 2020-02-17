@@ -16,8 +16,7 @@ resource "google_compute_instance" "vm-public" {
     }
 
     network_interface {
-        network = module.network.vms-network
-        subnetwork = module.network.vms-network-public-subnet
+        subnetwork = var.vms-public-subnet
     }
 }
 
@@ -37,11 +36,6 @@ resource "google_compute_instance" "vm-private" {
     }
 
     network_interface {
-        network = module.network.vms-network
-        subnetwork = module.network.vms-network-private-subnet
+        subnetwork = var.vms-private-subnet
     }
-}
-
-module "network" {
-    source = "../network"
 }

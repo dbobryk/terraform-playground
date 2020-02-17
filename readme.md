@@ -12,4 +12,7 @@
 - Read Me files for each module
 
 #### Bugs:
-- It tries to create my networks twice
+- ~~It tries to create my networks twice~~
+    - Fixed this by not importing the network module into the compute 
+    module and outputting my network values, reading them into the root 
+    main.tf and then setting them into the compute module.

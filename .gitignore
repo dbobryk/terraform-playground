@@ -31,3 +31,6 @@ override.tf.json
 
 # Don't send the service account key
 account.json
+
+# Don't send plan files
+tfplan

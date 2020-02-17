@@ -1,6 +1,6 @@
 ### variables.tf ###
 variable "project_id" {
-  default     = "playground-s-11-5d7269"
+  default     = "playground-s-11-27ef46"
   description = "The project to create the resources in."
 }
 

@@ -4,12 +4,12 @@ provider "google" {
   region      = var.region
 }
 
-terraform {
-  backend "gcs" {
-    bucket  = "dbobryk-tf-state-123"
-    prefix  = "terraform/state"
-  }
-}
+# terraform {
+#   backend "gcs" {
+#     bucket  = "dbobryk-tfstate-222"
+#     prefix  = "terraform/state"
+#   }
+# }
 
 module "storage" {
   source  = "./storage"
@@ -22,4 +22,7 @@ module "network" {
 
 module "compute" {
   source = "./compute"
+  vms-network = module.network.vms-network
+  vms-public-subnet = module.network.vms-public-subnet
+  vms-private-subnet = module.network.vms-private-subnet
 }
