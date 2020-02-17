@@ -11,8 +11,11 @@
 
 - Create an SQL instance
 - Read Me files for each module
-- The Dockerfile is ugly but it works, need to build  a base image with the 
-    appropriate tools that can run a script to run terraform
+- ~~The Dockerfile is ugly but it works, need to build  a base image with the 
+    appropriate tools that can run a script to run terraform~~
+    - Cleaned up the Dockerfile, it just builds the image with required tools 
+    and scripts. 
+- The 
 
 #### Bugs:
 - ~~It tries to create my networks twice~~
