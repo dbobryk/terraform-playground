@@ -34,3 +34,6 @@ account.json
 
 # Don't send plan files
 tfplan
+
+# Pycharm folder
+.idea
