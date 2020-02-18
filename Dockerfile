@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:slim
+FROM google/cloud-sdk
 
 RUN apt update && apt install -y
 RUN apt install \
@@ -10,5 +10,4 @@ RUN wget https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linu
     && unzip terraform_0.12.20_linux_amd64.zip && mv terraform /usr/local/bin \
     && rm terraform_0.12.20_linux_amd64.zip
 
-COPY ./scripts/build.sh /build.sh
-COPY ./scripts/destroy.sh /destroy.sh
+COPY ./scripts/*.sh /scripts/

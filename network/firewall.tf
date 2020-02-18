@@ -22,7 +22,6 @@ resource "google_compute_firewall" "vms-public-firewall" {
 resource "google_compute_firewall" "k8s-public-firewall" {
   network     = google_compute_network.k8s.id
   name        = "k8s-public-firewall"
-  target_tags = ["ssh"]
 
   depends_on = [
     google_compute_network.k8s,
@@ -35,7 +34,7 @@ resource "google_compute_firewall" "k8s-public-firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22"]
+    ports    = ["22", "80", "8080"]
   }
 }
 
